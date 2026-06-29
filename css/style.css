@@ -257,7 +257,8 @@ nav.main-nav {
   padding: 0.5rem 0;
 }
 
-.nav-item.dropdown:hover .dropdown-menu {
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown.open .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -1156,7 +1157,8 @@ footer.site-footer {
     width: 100%;
   }
   
-  .nav-item.dropdown:hover .dropdown-menu {
+  .nav-item.dropdown:hover .dropdown-menu,
+  .nav-item.dropdown.open .dropdown-menu {
     position: static;
     opacity: 1;
     visibility: visible;
@@ -1192,6 +1194,33 @@ footer.site-footer {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.85rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .hero-section {
+    padding: 3.5rem 0 4rem 0;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+  }
+  .highlights-grid {
+    gap: 1.25rem;
+  }
+  .card {
+    padding: 1.25rem;
   }
 }
 
